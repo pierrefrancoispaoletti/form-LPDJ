@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form/styles.css" />
+    <script src="form/app.js" type="text/javascript"></script>
+    <title>Formulaire bons de commande</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-image">
+            <img src="form/images/logo.png" alt="">
+        </div>
+        <div class="header-title">
+            <h1>Bon de commande</h1>
+        </div>
+    </header>
+    <main class="main">
+        <form action="/">
+        <section class="section">
+            <ul class="ul">
+                <li class="li">
+                    <div>
+                        <span>
+                            REF.BDC : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="refbdc" id="refbdc" value="2022/215/BC/DIR/MB/C1"></span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Papeete le : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="datedocument" id="datedocument" value="19/09/2022"></span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Destinataire : 
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <input type="text" name="destinataire" id="destinataire" value="pfp">
+                        </span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Reference devis : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="devis" id="devis" value="Devis DE22-1513"></span>
+                    </div>
+                </li>
+            </ul>
+            <div class="information">
+                <span>
+                    Merci de veiller à reporter notre référence de bon de commande sur votre facture
+                </span>
+            </div>
+        </section>
+        <section class="section">
+            <table class="table" border="1">
+                <thead class="thead">
+                    <tr>
+                        <th rowspan="4">Designation</th>
+                        <th rowspan="1">Ref</th>
+                        <th rowspan="1">Qte</th>
+                        <th rowspan="1">P.U.</th>
+                        <th rowspan="1">Total HT</th>
+                    </tr>
+                </thead>
+                <div class="buttons">
+                    <button class="button add_ligne" onclick=Init.addElement() type="button">
+                        +
+                    </button>
+                </div>
+                <tbody class="tbody" id="tbody">
+                    <tr class="tbody-lign" id="ligne_0">
+                        <td><input size="40" type="text" name="ligne_0_designation" id="ligne_0_designation"></td>
+                        <td><input size="10" type="text" name="ligne_0_ref" id="ligne_0_ref"></td>
+                        <td><input size="10" type="text" name="ligne_0_qte" id="ligne_0_qte"></td>
+                        <td><input size="10"type="text" name="ligne_0_pu" id="ligne_0_pu"></td>
+                        <td><input size="10"type="text" name="ligne_0_total_ht" id="ligne_0_total_ht"></td>
+                    </tr>
+                </tbody>
+                <tfoot class="tfoot">
+                    <tr>
+                        <th colspan="4">Total HT</th>
+                        <td><input type="text" name="total_ht" id="total_ht"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">TVA</th>
+                        <td><input type="text" name="tva" id="tva"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">TOTAL T.T.C en F.CFP</th>
+                        <td><input type="text" name="total_cfp" id="total_cfp" value="0"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section class="section followed">
+            <div>
+                <span>Dossier suivi par :</span>
+            </div>
+            <div>
+                <select name="user" id="user">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </section>
+        <div>
+            <button>Soumettre</button>
+        </div>
+    </form>
+        <section class="section payment">
+            <div>
+                <span>Conditions de reglement</span><span> :</span><br>
+                <span>
+                    30 jours fin du mois
+                </span>
+            </div>
+            <div>
+                <span>Conditions de livraison</span><span> :</span><br>
+                <span>
+                </span>
+            </div>
+        </section>
+        <section class="section signature">
+            <div>
+                Visa Direction
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            LA PACIFIQUE DES JEUX<br>
+            1 rue du Père Colette<br>
+            BP 20730 - 98713 Papeete<br>
+            Tél : (689) 40.45.49.49 - Fax : (689) 40.45.50.60<br>
+        </p>
+        <p>
+            SA au capital de 150.000.000 FCFP<br>
+            RCS PAPEETE TPI 9158 B (ancien RCS 4193 B 91)<br>
+            PAPEETE TAHITI 231 027<br>
+        </p>
+    </footer>
+</body>
+</html>

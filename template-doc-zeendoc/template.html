@@ -1,0 +1,417 @@
+    <style>
+        body {
+    width: max-content;
+    margin: 40px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto';
+}
+
+:root {
+    --space : 5px;
+    --font-size: 1.3em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-image {
+    align-self: flex-start;
+
+}
+.header-title {
+    text-transform: uppercase;
+}
+
+.section {
+    margin: 18px 0;
+    width: auto;
+}
+
+
+.ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.li {
+    display: flex;
+    width: 100%;
+    margin: var(--space) 0;
+}
+
+.li div:nth-child(1) {
+    width: 20%;
+}
+.li div:nth-child(1) span {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.li div:nth-child(2) {
+    margin-left: 10%;
+    text-align: left;
+}
+
+.li div:nth-child(2) input {
+    border: 0;
+    font-size: var(--font-size);
+}
+
+.li div:nth-child(2) span {
+    font-size: var(--font-size);
+    vertical-align: middle;
+}
+
+.li:not(:last-child) {
+
+    border-bottom: 0.5px solid grey;
+}
+
+.information {
+    margin : var(--space) 0;
+    border: 3px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border : 3px black solid ;
+}
+
+th {
+    border-color: transparent black black transparent;
+    border-width: 0 3px 3px 0;
+    text-transform: uppercase;
+}
+
+td {
+    border-width: 0 3px 3px 0;
+}
+
+th:last-child{
+    border-color: transparent transparent black transparent;
+}
+
+
+.tbody td {
+    border-color: transparent  black transparent transparent;
+    border-width: 0 3px 0 0;
+    height: 2em;
+}
+
+.tbody td input {
+    width: max-content;
+    border:0;
+    font-size: var(--font-size);
+    text-align: right;
+
+}
+
+
+.tbody td:last-child{
+    border-color: transparent transparent transparent transparent;
+}
+
+.tbody tr:last-child td{
+    border-color: transparent black black transparent;
+    border-width: 0 3px 3px 0;
+    
+}
+
+.tbody tr:last-child td:last-child{
+    border-color: transparent transparent black transparent;
+    border-width: 0 3px 3px 0;
+    
+}
+
+.tbody-lign {
+    text-align: right;
+    border:  0;
+}
+
+.tbody td:last-child{
+    border-color: transparent transparent transparent transparent;
+}
+
+.tbody tr:last-child td{
+    border-color: transparent black black transparent;
+    border-width: 0 3px 3px 0;
+    
+}
+
+.tfoot {
+    text-align: right;
+}
+
+.tfoot td {
+    border-color: transparent transparent black transparent;
+}
+
+.tfoot td input {
+    width: max-content;
+    border:0;
+    font-size: var(--font-size);
+    text-align: right;
+
+}
+
+.tfoot tr:nth-child(2n+1) th {
+    border-color: transparent black transparent  transparent;
+}
+
+.tfoot tr:last-child td {
+    border-color: transparent transparent transparent  transparent;
+}
+
+.followed {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.followed div:first-child {
+    width: 20%;
+}
+.followed div:last-child {
+    margin-left: 10%;
+}
+
+.payment {
+    display: flex;
+}
+
+.payment div:first-child {
+    width:22%;
+}
+
+.payment div:first-child span:first-child ,.payment div:last-child span:first-child {
+    font-weight: bold;
+    text-decoration: underline 3px;
+}
+
+.payment div:last-child {
+    margin-left: 30%;
+}
+
+
+.signature {
+    position: relative;
+    margin-left: 75%;
+    display: flex;
+    justify-content: flex-end; 
+    border: 1px solid black;
+    padding: 48px;
+}
+
+.signature div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.8em;
+}
+
+.footer {
+    margin-top: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer p {
+    width: 40%
+}
+
+.footer p:last-child {
+    text-align: right;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: var(--space);
+}
+
+.add_ligne {
+    background: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    font-size: var(--font-size);
+}
+
+.delete_ligne {
+    background: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    font-size: var(--font-size);
+}
+
+
+
+    </style>
+    <header class="header">
+        <div class="header-image">
+            <img src="form/images/logo.png" alt="">
+        </div>
+        <div class="header-title">
+            <h1>Bon de commande</h1>
+        </div>
+    </header>
+    <main class="main">
+        <form action="/">
+        <section class="section">
+            <ul class="ul">
+                <li class="li">
+                    <div>
+                        <span>
+                            REF.BDC : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="refbdc" id="refbdc" value="2022/215/BC/DIR/MB/C1"></span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Papeete le : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="datedocument" id="datedocument" value="19/09/2022"></span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Destinataire : 
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <input type="text" name="destinataire" id="destinataire" value="pfp">
+                        </span>
+                    </div>
+                </li>
+                <li class="li">
+                    <div>
+                        <span>
+                            Reference devis : 
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="devis" id="devis" value="Devis DE22-1513"></span>
+                    </div>
+                </li>
+            </ul>
+            <div class="information">
+                <span>
+                    Merci de veiller à reporter notre référence de bon de commande sur votre facture
+                </span>
+            </div>
+        </section>
+        <section class="section">
+            <table class="table" border="1">
+                <thead class="thead">
+                    <tr>
+                        <th rowspan="4">Designation</th>
+                        <th rowspan="1">Ref</th>
+                        <th rowspan="1">Qte</th>
+                        <th rowspan="1">P.U.</th>
+                        <th rowspan="1">Total HT</th>
+                    </tr>
+                </thead>
+                <div class="buttons">
+                    <button class="button add_ligne" onclick=Init.addElement() type="button">
+                        +
+                    </button>
+                </div>
+                <tbody class="tbody" id="tbody">
+                    <tr class="tbody-lign" id="ligne_0">
+                        <td><input size="40" type="text" name="ligne_0_designation" id="ligne_0_designation"></td>
+                        <td><input size="10" type="text" name="ligne_0_ref" id="ligne_0_ref"></td>
+                        <td><input size="10" type="text" name="ligne_0_qte" id="ligne_0_qte"></td>
+                        <td><input size="10"type="text" name="ligne_0_pu" id="ligne_0_pu"></td>
+                        <td><input size="10"type="text" name="ligne_0_total_ht" id="ligne_0_total_ht"></td>
+                    </tr>
+                </tbody>
+                <tfoot class="tfoot">
+                    <tr>
+                        <th colspan="4">Total HT</th>
+                        <td><input type="text" name="total_ht" id="total_ht"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">TVA</th>
+                        <td><input type="text" name="tva" id="tva"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">TOTAL T.T.C en F.CFP</th>
+                        <td><input type="text" name="total_cfp" id="total_cfp" value="0"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section class="section followed">
+            <div>
+                <span>Dossier suivi par :</span>
+            </div>
+            <div>
+                <select name="user" id="user">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </section>
+        <div>
+            <button>Soumettre</button>
+        </div>
+    </form>
+        <section class="section payment">
+            <div>
+                <span>Conditions de reglement</span><span> :</span><br>
+                <span>
+                    30 jours fin du mois
+                </span>
+            </div>
+            <div>
+                <span>Conditions de livraison</span><span> :</span><br>
+                <span>
+                    
+                </span>
+            </div>
+        </section>
+        <section class="section signature">
+            <div>
+                Visa Direction
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            LA PACIFIQUE DES JEUX<br>
+            1 rue du Père Colette<br>
+            BP 20730 - 98713 Papeete<br>
+            Tél : (689) 40.45.49.49 - Fax : (689) 40.45.50.60<br>
+        </p>
+        <p>
+            SA au capital de 150.000.000 FCFP<br>
+            RCS PAPEETE TPI 9158 B (ancien RCS 4193 B 91)<br>
+            PAPEETE TAHITI 231 027<br>
+        </p>
+    </footer>
