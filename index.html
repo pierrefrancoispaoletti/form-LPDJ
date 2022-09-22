@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <script src="app.js" type="text/javascript"></script>
+    <title>Formulaire bons de commande</title>
 </head>
 <body>
     <header class="header">
@@ -17,7 +18,7 @@
         </div>
     </header>
     <main class="main">
-        <form action="">
+        <form>
         <section class="section">
             <ul class="ul">
                 <li class="li">
@@ -27,7 +28,7 @@
                         </span>
                     </div>
                     <div>
-                        <span>2022/215/BC/DIR/MB/C1</span>
+                        <span><input type="text" name="refbdc" id="refbdc" value="2022/215/BC/DIR/MB/C1"></span>
                     </div>
                 </li>
                 <li class="li">
@@ -37,7 +38,7 @@
                         </span>
                     </div>
                     <div>
-                        <span>19/09/2022</span>
+                        <span><input type="text" name="datedocument" id="datedocument" value="19/09/2022"></span>
                     </div>
                 </li>
                 <li class="li">
@@ -47,7 +48,9 @@
                         </span>
                     </div>
                     <div>
-                        <input type="text" name="" id="">
+                        <span>
+                            <input type="text" name="destinataire" id="destinataire" value="pfp">
+                        </span>
                     </div>
                 </li>
                 <li class="li">
@@ -57,9 +60,7 @@
                         </span>
                     </div>
                     <div>
-                        <span>
-                            Devis DE22-1513
-                        </span>
+                        <span><input type="text" name="devis" id="devis" value="Devis DE22-1513"></span>
                     </div>
                 </li>
             </ul>
@@ -81,41 +82,31 @@
                     </tr>
                 </thead>
                 <div class="buttons">
-                    <button class="button add" type="button">
+                    <button class="button add_ligne" onclick=Init.addElement() type="button">
                         +
                     </button>
-                    <button class="button delete" type="button">
-                        -
-                    </button>
                 </div>
-                <tbody class="tbody">
-                    <tr class="tbody-lign">
-                        <td><input size="40" type="text" name="" id=""></td>
-                        <td><input size="10" type="text" name="" id=""></td>
-                        <td><input size="10" type="text" name="" id=""></td>
-                        <td><input size="10"type="text" name="" id=""></td>
-                        <td><input size="10"type="text" name="" id=""></td>
-                    </tr>
-                    <tr class="tbody-lign">
-                        <td><input size="40" type="text" name="" id=""></td>
-                        <td><input size="10" type="text" name="" id=""></td>
-                        <td><input size="10" type="text" name="" id=""></td>
-                        <td><input size="10"type="text" name="" id=""></td>
-                        <td><input size="10"type="text" name="" id=""></td>
+                <tbody class="tbody" id="tbody">
+                    <tr class="tbody-lign" id="ligne_0">
+                        <td><input size="40" type="text" name="ligne_0_designation" id="ligne_0_designation"></td>
+                        <td><input size="10" type="text" name="ligne_0_ref" id="ligne_0_ref"></td>
+                        <td><input size="10" type="text" name="ligne_0_qte" id="ligne_0_qte"></td>
+                        <td><input size="10"type="text" name="ligne_0_pu" id="ligne_0_pu"></td>
+                        <td><input size="10"type="text" name="ligne_0_total_ht" id="ligne_0_total_ht"></td>
                     </tr>
                 </tbody>
                 <tfoot class="tfoot">
                     <tr>
                         <th colspan="4">Total HT</th>
-                        <td>1500</td>
+                        <td><input type="text" name="total_ht" id="total_ht"></td>
                     </tr>
                     <tr>
                         <th colspan="4">TVA</th>
-                        <td>125</td>
+                        <td><input type="text" name="tva" id="tva"></td>
                     </tr>
                     <tr>
                         <th colspan="4">TOTAL T.T.C en F.CFP</th>
-                        <td>50000</td>
+                        <td><input type="text" name="total_cfp" id="total_cfp" value="0"></td>
                     </tr>
                 </tfoot>
             </table>
@@ -125,7 +116,7 @@
                 <span>Dossier suivi par :</span>
             </div>
             <div>
-                <select name="" id="">
+                <select name="user" id="user">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -135,16 +126,19 @@
                 </select>
             </div>
         </section>
+        <div>
+            <button>Soumettre</button>
+        </div>
     </form>
         <section class="section payment">
             <div>
-                <span>Conditions de reglement</span><span> :</span>
+                <span>Conditions de reglement</span><span> :</span><br>
                 <span>
                     30 jours fin du mois
                 </span>
             </div>
             <div>
-                <span>Conditions de livraison</span><span> :</span>
+                <span>Conditions de livraison</span><span> :</span><br>
                 <span>
                     
                 </span>

@@ -6,6 +6,7 @@ body {
 
 :root {
     --space : 5px;
+    --font-size: 1.3em;
 }
 
 .header {
@@ -25,6 +26,7 @@ body {
 
 .section {
     margin: 18px 0;
+    width: auto;
 }
 
 
@@ -57,11 +59,11 @@ body {
 
 .li div:nth-child(2) input {
     border: 0;
-    font-size: 1.3em;
+    font-size: var(--font-size);
 }
 
 .li div:nth-child(2) span {
-    font-size: 1.3em;
+    font-size: var(--font-size);
     vertical-align: middle;
 }
 
@@ -107,10 +109,11 @@ th:last-child{
 .tbody td input {
     width: max-content;
     border:0;
-    font-size: 1.3em;
+    font-size: var(--font-size);
     text-align: right;
 
 }
+
 
 .tbody td:last-child{
     border-color: transparent transparent transparent transparent;
@@ -149,6 +152,14 @@ th:last-child{
 
 .tfoot td {
     border-color: transparent transparent black transparent;
+}
+
+.tfoot td input {
+    width: max-content;
+    border:0;
+    font-size: var(--font-size);
+    text-align: right;
+
 }
 
 .tfoot tr:nth-child(2n+1) th {
@@ -218,6 +229,32 @@ th:last-child{
 
 .footer p:last-child {
     text-align: right;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: var(--space);
+}
+
+.add_ligne {
+    background: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    font-size: var(--font-size);
+}
+
+.delete_ligne {
+    background: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    font-size: var(--font-size);
 }
 
 
