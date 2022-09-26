@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+    *{
+        font-family:Arial , sans-serif; 
+    }
+    body {
+        padding: 8px;
+        margin: 12px;
+    }
+	.container {
+		width: 100%
+	}
+
+	.header-img {
+        width: 100%;
+
+	}
+	.header-title {
+        width: 100%;
+        text-align: center;
+	}
+    .ligne-haut {
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+    .en-tete {
+        font-weight: bold;
+        display: inline-block;
+        width: 40%
+    }
+    .valeur {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+    .message{
+        font-weight: bold;
+        text-align: center;
+        border: 3px solid black;
+        margin: 12px auto;
+    }
+
+    .no-border {
+        margin-top: 6px;
+        border-bottom: 0;
+    }
+
+    .conditions {
+        width: 100%;
+    }
+    .left {
+        float:  left;
+        max-width: 50%;
+    }
+    .right {
+        float: right;
+        max-width: 40%;
+    }
+
+    table, tbody {
+        width: 100%;
+        vertical-align: top; 
+        overflow: visible; 
+    }
+
+    h5 {
+        text-decoration: underline 2px;
+    }
+
+    .s2 {
+        color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; 
+    }
+    .s6 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+    .s7 { 
+        color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; 
+    }
+
+    .signature {
+        margin-top: 180px;
+        width: 100%;
+        margin-bottom: 45%;
+    }
+    .container-signature {
+        float: left;
+        margin-left: 60%;
+        width: 300px;
+        height: 95px;
+        border: 1px solid black;
+    }
+    footer {
+        bottom:12px;
+        width: 100%;
+    }
+    .left-footer {
+        width: calc(50% - 8px);
+        text-align: left;
+        float: left;
+    }
+    .right-footer {
+        width: calc(50% - 8px);
+        text-align: right;
+        float: right;
+    }
+</style>
+<body>
+	<header>
+		<div class="container">
+			<div class="header-img">
+				<img height="65px" src="https://armoires.zeendoc.com/la_pacifique_des_jeux_1/_ClientSpecific/React_Form_LPDJ/form/images/logo.png" alt="">
+			</div>
+			<div class="header-title">
+				<h1>
+					BON DE COMMANDE
+				</h1>
+			</div>
+		</div>
+	</header>
+	<main>
+        <div class="ligne-haut">
+			<span class="en-tete">
+				Réf. BDC :
+			</span>
+			<span class="valeur" >
+				2022/685/BC/DIR/MB/C1
+			</span>
+		</div>
+		<div class="ligne-haut">
+            <span class="en-tete">Papeete le : </span>
+            <span class="valeur">19/03/1984</span>
+        </div>
+        <div class="ligne-haut">
+            <span class="en-tete">Destinataire : </span>
+            <span class="valeur">TEST</span>
+        </div>
+        <div class="ligne-haut">
+            <span class="en-tete">
+                Référence devis : 
+            </span>
+            <span class="valeur">
+                123456789
+            </span>
+        </div>
+        <div class="message">Merci de veiller à reporter notre référence de bon de commande sur votre facture</div>
+        <table style="border-collapse:collapse" cellspacing="0">
+			<tr style="height:11pt">
+				<td style="width:225pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s2" style="padding-left: 78pt;padding-right: 77pt;text-indent: 0pt;line-height: 9pt;text-align: center;">
+						DESIGNATION
+					</p>
+				</td>
+				<td style="width:52pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s2" style="padding-left: 16pt;padding-right: 15pt;text-indent: 0pt;line-height: 9pt;text-align: center;">
+						REF
+					</p>
+				</td>
+				<td style="width:55pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s2" style="padding-left: 16pt;padding-right: 15pt;text-indent: 0pt;line-height: 9pt;text-align: center;">
+						QTE
+					</p>
+				</td>
+				<td style="width:73pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s2" style="padding-left: 26pt;padding-right: 24pt;text-indent: 0pt;line-height: 9pt;text-align: center;">
+						P.U.
+					</p>
+				</td>
+				<td style="width:83pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s2" style="padding-left: 14pt;padding-right: 13pt;text-indent: 0pt;line-height: 9pt;text-align: center;">
+						TOTAL H.T.
+					</p>
+				</td>
+			</tr>
+			<?php foreach ($Display["lignes"] as $ligne) : ?>
+				<tr style="height:16pt">
+					<td style="width:225pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt">
+						<p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+							<?= $ligne["designation"] ?>
+						</p>
+					</td>
+					<td style="width:52pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt">
+						<p class="s6" style="padding-top: 6pt;padding-left: 27pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+							<?= $ligne["ref"] ?>
+						</p>
+					</td>
+					<td style="width:55pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt">
+						<p class="s6" style="padding-top: 6pt;padding-left: 1pt;text-indent: 0pt;line-height: 8pt;text-align: center;">
+							<?= $ligne["qte"] ?>
+						</p>
+					</td>
+					<td style="width:73pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt">
+						<p class="s6" style="padding-top: 5pt;padding-left: 27pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+							<?= $ligne["pu"] ?>
+						</p>
+					</td>
+					<td style="width:83pt;border-left-style:solid;border-left-width:2pt;border-right-style:solid;border-right-width:2pt">
+						<p class="s6" style="padding-top: 5pt;padding-left: 37pt;text-indent: 0pt;line-height: 9pt;text-align: left;">
+							<?= $ligne["total"] ?>
+						</p>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+			<tr style="height:10pt">
+				<td style="width:225pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:52pt;border-top-style:solid;border-top-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:55pt;border-top-style:solid;border-top-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:73pt;border-top-style:solid;border-top-width:2pt;border-right-style:solid;border-right-width:2pt;vertical-align:middle">
+					<p class="s7" style="padding-right: 3pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						TOTAL H.T.
+					</p>
+				</td>
+				<td style="width:83pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s6" style="padding-right: 2pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						<?= $Display["total_ht"] ?>
+					</p>
+				</td>
+			</tr>
+			<tr style="height:10pt">
+				<td style="width:225pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:52pt;border-bottom-style:solid;border-bottom-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:55pt;border-bottom-style:solid;border-bottom-width:2pt">
+					<p style="text-indent: 0pt;text-align: left;">
+						<br />
+					</p>
+				</td>
+				<td style="width:73pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt; vertical-align:middle">
+					<p class="s7" style="padding-right: 3pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						T.V.A.
+					</p>
+				</td>
+				<td style="width:83pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s6" style="padding-right: 2pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						<?= $Display["tva"] ?>
+					</p>
+				</td>
+			</tr>
+			<tr style="height:11pt">
+				<td style="width:405pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt" colspan="4">
+					<p class="s2" style="padding-right: 20pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						TOTAL T.T.C en F. CFP
+					</p>
+				</td>
+				<td style="width:83pt;border-top-style:solid;border-top-width:2pt;border-left-style:solid;border-left-width:2pt;border-bottom-style:solid;border-bottom-width:2pt;border-right-style:solid;border-right-width:2pt">
+					<p class="s7" style="padding-right: 2pt;text-indent: 0pt;line-height: 9pt;text-align: right;">
+						<?= $Display["total_cfp"] ?>
+					</p>
+				</td>
+			</tr>
+		</table>
+        <div class="ligne-haut no-border">
+            <span class="en-tete">Dossier suivi par : </span>
+            <span class="valeur">Tartampion - 0836656565</span>
+        </div>
+        <div class="conditions">
+            <div class="left">
+                <h5>Condition de règlement : </h5>
+                <p>30 jours fin du mois</p> 
+            </div>
+            <div class="right">
+                <h5 style="font-weight: bold">Conditions de livraison : </h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae deserunt natus nam velit, recusandae magni sed officia labore eius repudiandae</p>
+            </div>
+        </div>
+        <div class="signature">
+            <div class="container-signature">
+                <span style="font-size: 0.8em">Visa Direction</span>
+            </div>
+        </div>
+    </main>
+	<footer>
+            <div class="left-footer">
+                LA PACIFIQUE DES JEUX<br>
+1 rue du Père Colette<br>
+BP 20730 - 98713 Papeete<br>
+Tél : (689) 40.45.49.49 - Fax : (689) 40.45.50.60<br>
+            </div>
+            <div class="right-footer">
+                SA au capital de 150.000.000 FCFP<br>
+RCS PAPEETE TPI 9158 B (ancien RCS 4193 B 91)<br>
+PAPEETE TAHITI 231 027<br>
+            </div>
+	</footer>
+
+</body>
+
+</html>
